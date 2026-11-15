@@ -3,3 +3,4 @@ node_modules/
 .vitepress/dist/
 .DS_Store
 *.log
+public/资料分析/
