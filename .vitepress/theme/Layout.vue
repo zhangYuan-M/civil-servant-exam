@@ -341,10 +341,9 @@ onContentUpdated(() => {
   background: var(--vp-c-default-soft);
 }
 
-/* ---------- 正文：适合长时间阅读的中文衬线字体 ---------- */
+/* ---------- 正文：与左侧目录保持一致的无衬线字体 ---------- */
 .vp-doc {
-  font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC",
-    "Source Han Serif CN", "STSong", "SimSun", Georgia, serif;
+  font-family: var(--vp-font-family-base);
   font-size: 16.5px;
   line-height: 1.85;
   letter-spacing: 0.01em;
