@@ -98,7 +98,7 @@ title: ${subject.name} · 学习目录
 > 共 ${summary.join('、')}。
 > 本页由 \`npm run docs:sync\` 根据 \`${subject.name}/\` 文件夹自动生成；新增文件后重跑一次即可更新。
 
-${sections.join('\n\n')}
+${sections.join('\n\n---\n\n')}
 `
 
   fs.writeFileSync(path.join(subject.dir, 'index.md'), content, 'utf8')
