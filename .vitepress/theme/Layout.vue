@@ -303,7 +303,7 @@ onContentUpdated(() => {
 
 .reading-meta {
   margin: 19px 0 0;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--vp-c-text-3);
   text-align: center;
@@ -326,7 +326,7 @@ onContentUpdated(() => {
   justify-content: flex-end;
   gap: 8px;
   padding: 8px 10px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--vp-c-text-3);
   text-decoration: none;
   cursor: pointer;
@@ -339,6 +339,19 @@ onContentUpdated(() => {
 .side-top:hover {
   color: var(--vp-c-text-1);
   background: var(--vp-c-default-soft);
+}
+
+/* ---------- 左侧栏：字号整体上调一号 ---------- */
+.VPSidebar .VPSidebarItem .text {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* ---------- 左侧栏：讲义 / 课后练习 / 课件 三个分组之间加分隔线 ---------- */
+.VPSidebar .VPSidebarItem.level-1 + .VPSidebarItem.level-1 {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
 }
 
 /* ---------- 正文：与左侧目录保持一致的无衬线字体 ---------- */
