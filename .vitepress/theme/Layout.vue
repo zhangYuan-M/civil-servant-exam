@@ -314,7 +314,7 @@ onContentUpdated(() => {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid var(--vp-c-divider);
 }
@@ -324,15 +324,17 @@ onContentUpdated(() => {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 8px;
-  padding: 8px 10px;
+  gap: 6px;
+  padding: 8px 8px;
   font-size: 14px;
   color: var(--vp-c-text-3);
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 8px;
+  flex: none;
 }
 
 .side-theme:hover,
