@@ -1,7 +1,7 @@
 // 根据根目录下的科目文件夹（资料分析 / 判断推理 / …）自动生成侧边栏。
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { scanMaterials, shortTitle } from './materials.mjs'
+import { navTitle, scanMaterials } from './materials.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const subjects = scanMaterials(root)
@@ -13,7 +13,7 @@ const subjectGroup = (subject) => {
     items.push({
       text: '讲义',
       collapsed: false,
-      items: subject.lectures.map((l) => ({ text: shortTitle(l.title), link: l.link })),
+      items: subject.lectures.map((l) => ({ text: navTitle(l.file, l.title), link: l.link })),
     })
   }
 
@@ -21,7 +21,7 @@ const subjectGroup = (subject) => {
     items.push({
       text: group.name,
       collapsed: true,
-      items: group.items.map((l) => ({ text: shortTitle(l.title), link: l.link })),
+      items: group.items.map((l) => ({ text: navTitle(l.file, l.title), link: l.link })),
     })
   }
 

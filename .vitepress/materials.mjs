@@ -48,6 +48,13 @@ export const shortTitle = (title) => {
   return rest ? `第 ${m[1]} 讲 · ${rest}` : `第 ${m[1]} 讲`
 }
 
+// 新命名「01-图推-位置规律-01-平移.md」-> 「位置规律 · 平移」
+export const navTitle = (file, title) => {
+  const m = file.match(/^\d+-[^-]+-(.+?)-\d+-(.+)\.md$/)
+  if (m) return `${m[1]} · ${m[2]}`
+  return shortTitle(title)
+}
+
 // "ai出题-课后练习题" -> "课后练习"
 export const groupName = (dirName) => {
   const name = dirName
